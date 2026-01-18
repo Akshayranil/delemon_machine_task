@@ -1,3 +1,4 @@
+import 'package:delemon_machine_task/core/user/current_user.dart';
 import 'package:delemon_machine_task/presentation/ui/task_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -148,6 +149,8 @@ class _TaskCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isAssigned = task.assigneeIds.contains(currentUser.id);
+    final canEdit = currentUser.role == UserRole.admin || isAssigned;
     return Card(
       child: ListTile(
         isThreeLine: true,
@@ -210,11 +213,11 @@ Text(
               .map((s) =>
                   DropdownMenuItem(value: s, child: Text(s.name)))
               .toList(),
-          onChanged: (v) {
+          onChanged:canEdit? (v) {
             if (v == null) return;
             final updated = task.copyWith(status: v);
             context.read<TaskBloc>().add(UpdateTask(updated));
-          },
+          }:null,
         ),
       ),
     );

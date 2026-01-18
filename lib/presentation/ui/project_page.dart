@@ -1,3 +1,5 @@
+import 'package:delemon_machine_task/core/user/current_user.dart';
+import 'package:delemon_machine_task/domain/entities/enums.dart';
 import 'package:delemon_machine_task/presentation/blocs/projectbloc/project_bloc.dart';
 import 'package:delemon_machine_task/presentation/blocs/projectbloc/project_event.dart';
 import 'package:delemon_machine_task/presentation/blocs/projectbloc/project_state.dart';
@@ -78,9 +80,12 @@ class ProjectsPage extends StatelessWidget {
             },
           ),
           floatingActionButton: FloatingActionButton(
-            onPressed: () => _showAddDialog(blocContext),
-            child: const Icon(Icons.add),
-          ),
+  onPressed: currentUser.role == UserRole.admin
+      ? () => _showAddDialog(context)
+      : null, // disabled for staff
+  child: const Icon(Icons.add),
+),
+
         ),
       ),
     );

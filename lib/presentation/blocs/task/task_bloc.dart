@@ -1,3 +1,5 @@
+import 'package:delemon_machine_task/core/user/current_user.dart';
+import 'package:delemon_machine_task/domain/entities/enums.dart';
 import 'package:delemon_machine_task/domain/repository/task_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,17 +17,35 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
     on<UpdateTask>(_onUpdate);
   }
 
+  // Future<void> _onLoad(LoadTasks event, Emitter<TaskState> emit) async {
+  //   emit(state.copyWith(loading: true));
+
+  //   final tasks = await repository.fetchTasksByProject(event.projectId);
+
+  //   emit(state.copyWith(
+  //     all: tasks,
+  //     filtered: tasks,
+  //     loading: false,
+  //   ));
+  // }
+
   Future<void> _onLoad(LoadTasks event, Emitter<TaskState> emit) async {
-    emit(state.copyWith(loading: true));
+  emit(state.copyWith(loading: true));
 
-    final tasks = await repository.fetchTasksByProject(event.projectId);
+  final tasks = await repository.fetchTasksByProject(event.projectId);
 
-    emit(state.copyWith(
-      all: tasks,
-      filtered: tasks,
-      loading: false,
-    ));
-  }
+  // Filter tasks for staff
+  final visibleTasks = currentUser.role == UserRole.admin
+      ? tasks // Admin sees all
+      : tasks.where((t) => t.assigneeIds.contains(currentUser.id)).toList();
+
+  emit(state.copyWith(
+    all: visibleTasks,
+    filtered: visibleTasks,
+    loading: false,
+  ));
+}
+
 
   void _onFilter(ApplyFilters event, Emitter<TaskState> emit) {
     Iterable<TaskEntity> result = state.all;
