@@ -1,4 +1,5 @@
 import 'package:delemon_machine_task/presentation/ui/project_page.dart';
+import 'package:delemon_machine_task/presentation/ui/report_page.dart';
 import 'package:delemon_machine_task/presentation/ui/task_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -20,13 +21,13 @@ class AppRouter {
           return TasksPage(projectId: projectId);
         },
       ),
-      // GoRoute(
-      //   path: '/projects/:id/report',
-      //   builder: (context, state) {
-      //     final projectId = state.pathParameters['id']!;
-      //     return ReportPage(projectId: projectId);
-      //   },
-      // ),
+      GoRoute(
+        path: '/projects/:id/report',
+        builder: (context, state) {
+          final projectId = state.pathParameters['id']!;
+          return ReportPage(projectId: projectId);
+        },
+      ),
     ],
   );
 }
