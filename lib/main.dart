@@ -35,6 +35,7 @@ class TaskFlowApp extends StatelessWidget {
       ],
       child: MaterialApp.router(
         title: 'TaskFlow Mini',
+        debugShowCheckedModeBanner: false,
         theme: AppTheme.light(),
         darkTheme: AppTheme.dark(),
         themeMode: ThemeMode.system,
