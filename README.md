@@ -1,8 +1,8 @@
-TaskFlow Mini
+# TaskFlow Mini
 
 A small task management Flutter app (Projects → Tasks → Subtasks) built as part of a take-home assignment.
 
- Features
+##  Features
 
 - Create, list, and archive Projects
 - Create, list, update, and assign Tasks
@@ -15,7 +15,7 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 - Light/Dark theme support
 - Responsive UI with loading/empty/error states
 
- Architecture
+##  Architecture
 
 - **Flutter (stable, null-safe)**
 - **State Management:** BLoC (`flutter_bloc`) with `equatable`
@@ -24,22 +24,28 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 - **Data Layer:** In-memory + fake JSON seed data
 - **Theme:** Light & Dark with primary color `#0EA5E9`
 
-## 📦 Packages Used
+##  Packages Used
 
 - `flutter_bloc` → BLoC state management
 - `equatable` → Value equality for entities & states
 - `go_router` → Declarative routing
 - `intl` → Date formatting (optional if used)
 
-## 🖼 Screenshots
+##  Screenshots
 
 - **Light Mode:** ![light](screenshots/light.png)  
 - **Dark Mode:** ![dark](screenshots/dark.png)
 
-## ⚡ How to Run
+##  How to Run
 
-```bash
-git clone <repo-link>
-cd taskflow_mini
-flutter pub get
-flutter run
+1. Clone the repository
+   https://github.com/Akshayranil/delemon_machine_task.git
+
+2. Navigate to the project folder
+   cd delemon_machine_task
+   
+3. Install dependencies
+   flutter pub get
+
+4. Run the application
+   flutter run
