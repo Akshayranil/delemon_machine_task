@@ -30,7 +30,45 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 - `equatable` → Value equality for entities & states
 - `go_router` → Declarative routing
 
+## Known limitations
 
+- No real authentication / role-based backend
+
+User roles (Admin/Staff) are simulated using fake data.
+
+No secure login or token-based authentication is implemented.
+
+- In-memory data only
+
+All projects, tasks, and users are stored in memory using fake data sources.
+
+Data is lost when the app restarts.
+
+- No real-time updates
+
+Task updates are not synchronized across users or devices.
+
+No real-time listeners (e.g., WebSockets/Firebase) are implemented.
+
+## Future improvements
+
+- Backend integration
+
+Replace fake data sources with REST API or Firebase.
+
+Implement proper data persistence and sync.
+
+- Authentication & authorization
+
+Add login system with JWT/Firebase Auth.
+
+Enforce Admin vs Staff permissions from backend instead of UI-only checks.
+
+- Offline support
+
+Cache tasks locally using SQLite/Hive.
+
+Sync changes when connectivity is restored.
 ##  Screenshots
 
 
@@ -57,5 +95,6 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 
 4. Run the application
    flutter run
+
 
 
