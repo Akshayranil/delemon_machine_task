@@ -1,4 +1,4 @@
-import 'package:delemon_machine_task/features/screen_report/domain/repository/report_repository.dart';
+import 'package:delemon_machine_task/features/screen_report/domain/entity/report_entity.dart';
 import 'package:equatable/equatable.dart';
 
 
