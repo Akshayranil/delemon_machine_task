@@ -7,4 +7,4 @@ import '../../domain/entities/user_entity.dart';
 /// fakeUsers[0] -> Admin
 /// fakeUsers[1] -> Staff Alice
 /// fakeUsers[2] -> Staff Bob
-UserEntity currentUser = fakeUsers[2]; // Admin by default
+UserEntity currentUser = fakeUsers[0]; // Admin by default
