@@ -18,7 +18,7 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 ##  Architecture
 
 - **Flutter (stable, null-safe)**
-- **State Management:** BLoC (`flutter_bloc`) with `equatable`
+- **State Management:** BLoC (`flutter_bloc`) with `equatable` with CLEAN Architecture
 - **Navigation:** `go_router` (Navigator 2.0)
 - **Repository Pattern:** domain/repositories + data/repositories_impl
 - **Data Layer:** In-memory + fake JSON seed data
@@ -29,12 +29,16 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 - `flutter_bloc` → BLoC state management
 - `equatable` → Value equality for entities & states
 - `go_router` → Declarative routing
-- `intl` → Date formatting (optional if used)
+
 
 ##  Screenshots
 
-- **Light Mode:** ![light](screenshots/light.png)  
-- **Dark Mode:** ![dark](screenshots/dark.png)
+- **Light Mode:** ![light_mode](https://github.com/user-attachments/assets/2c879e18-fc6a-4e1f-97d0-6f54af6b12cd)
+ 
+- **Dark Mode:** ![dark_mode](https://github.com/user-attachments/assets/264eb4d2-280f-45a7-8763-ec8d15188720)
+- **Report Screen:** ![report_screen](https://github.com/user-attachments/assets/fa6dca2f-eebf-49b4-96e6-20476ced7133)
+
+
 
 ##  How to Run
 
@@ -49,3 +53,4 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 
 4. Run the application
    flutter run
+
