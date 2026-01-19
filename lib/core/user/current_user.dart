@@ -1,7 +1,7 @@
 
-import 'package:delemon_machine_task/data/datasource/fake_users.dart';
+import 'package:delemon_machine_task/core/user/fake_users.dart';
 
-import '../../domain/entities/user_entity.dart';
+import 'user_entity.dart';
 
 /// Change this to simulate which user is logged in
 /// fakeUsers[0] -> Admin

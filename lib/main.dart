@@ -1,9 +1,9 @@
-import 'package:delemon_machine_task/data/repository/project_repository_impl.dart';
-import 'package:delemon_machine_task/data/repository/report_repository_impl.dart';
-import 'package:delemon_machine_task/data/repository/task_repository_impl.dart';
-import 'package:delemon_machine_task/domain/repository/project_repository.dart';
-import 'package:delemon_machine_task/domain/repository/report_repository.dart';
-import 'package:delemon_machine_task/domain/repository/task_repository.dart';
+import 'package:delemon_machine_task/features/screen_project/data/repository/project_repository_impl.dart';
+import 'package:delemon_machine_task/features/screen_report/data/repository/report_repository_impl.dart';
+import 'package:delemon_machine_task/features/screen_task/data/repository/task_repository_impl.dart';
+import 'package:delemon_machine_task/features/screen_project/domain/repository/project_repository.dart';
+import 'package:delemon_machine_task/features/screen_report/domain/repository/report_repository.dart';
+import 'package:delemon_machine_task/features/screen_task/domain/repository/task_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

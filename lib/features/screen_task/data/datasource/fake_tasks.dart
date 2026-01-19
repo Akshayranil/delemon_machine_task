@@ -1,0 +1,47 @@
+import '../../domain/entity/task_entity.dart';
+import '../../../../core/enums/enums.dart';
+
+final fakeTasks = <TaskEntity>[
+  TaskEntity(
+    id: 't1',
+    projectId: 'p1',
+    title: 'Login Screen',
+    description: 'Build login UI and validation',
+    status: TaskStatus.done,
+    priority: TaskPriority.high,
+    startDate: DateTime.now().subtract(const Duration(days: 5)),
+    dueDate: DateTime.now().subtract(const Duration(days: 1)),
+    estimateHours: 5,
+    timeSpentHours: 6,
+    assigneeIds: ['u2'],
+    labels: ['ui', 'auth'],
+  ),
+  TaskEntity(
+    id: 't2',
+    projectId: 'p1',
+    title: 'Task List API',
+    description: 'Integrate task list endpoint',
+    status: TaskStatus.inProgress,
+    priority: TaskPriority.critical,
+    startDate: DateTime.now().subtract(const Duration(days: 2)),
+    dueDate: DateTime.now().add(const Duration(days: 2)),
+    estimateHours: 8,
+    timeSpentHours: 3,
+    assigneeIds: ['u3'],
+    labels: ['api'],
+  ),
+  TaskEntity(
+    id: 't3',
+    projectId: 'p1',
+    title: 'Report Screen',
+    description: 'Show project statistics',
+    status: TaskStatus.blocked,
+    priority: TaskPriority.medium,
+    startDate: DateTime.now(),
+    dueDate: DateTime.now().add(const Duration(days: 4)),
+    estimateHours: 4,
+    timeSpentHours: 0,
+    assigneeIds: ['u2', 'u3'],
+    labels: ['analytics'],
+  ),
+];
