@@ -33,10 +33,14 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 
 ##  Screenshots
 
-- **Light Mode:** ![light_mode](https://github.com/user-attachments/assets/2c879e18-fc6a-4e1f-97d0-6f54af6b12cd)
- 
-- **Dark Mode:** ![dark_mode](https://github.com/user-attachments/assets/264eb4d2-280f-45a7-8763-ec8d15188720)
-- **Report Screen:** ![report_screen](https://github.com/user-attachments/assets/fa6dca2f-eebf-49b4-96e6-20476ced7133)
+
+
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/2c879e18-fc6a-4e1f-97d0-6f54af6b12cd" width="250"/>
+  <img src="https://github.com/user-attachments/assets/264eb4d2-280f-45a7-8763-ec8d15188720" width="250"/>
+  <img src="https://github.com/user-attachments/assets/fa6dca2f-eebf-49b4-96e6-20476ced7133" width="250"/>
+</p>
+
 
 
 
@@ -53,4 +57,5 @@ A small task management Flutter app (Projects → Tasks → Subtasks) built as p
 
 4. Run the application
    flutter run
+
 
